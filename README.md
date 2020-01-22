@@ -1,4 +1,4 @@
-# password-generator
+# Password Generator
 The first step for security! Generate strong password using this tool.
 
 <br><br>
