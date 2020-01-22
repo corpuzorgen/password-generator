@@ -253,6 +253,24 @@ button.generate-password:active {
   transform: translateY(4px);
 }
 
+/* Extra small devices (phones, 414px and down) */
+@media only screen and (max-width: 414px) {
+  button.generate-password {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .checkbox-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .checkbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   h1,
@@ -266,7 +284,7 @@ button.generate-password:active {
     font-size: 2rem;
   }
   section.generate-password {
-    padding: 10% 5% 15%;
+    padding: 10% 8% 15%;
   }
   .generate-password-form {
     margin: 10% auto 5%;
