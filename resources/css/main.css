@@ -7,6 +7,10 @@
   font-weight: 300;
   outline: none;
 }
+html,
+body {
+  background-color: #f8f5f2;
+}
 
 h1,
 h2,
@@ -41,15 +45,17 @@ label {
   font-size: 1.8rem;
 }
 section.generate-password {
-  background-color: #f8f5f2;
-  padding: 83px 0 100px;
+  padding: 83px 25px 100px;
   width: 100%;
   text-align: center;
+  height: 100vh;
 }
 .generate-password-form {
   margin: 80px auto 10px;
   width: 100%;
   max-width: 610px;
+  position: relative;
+  z-index: 1;
 }
 
 .generate-password h1 {
@@ -63,7 +69,7 @@ section.generate-password {
   height: 73px;
   background: #fffffe;
   border: 2px solid #232323;
-  box-shadow: 0px 5px 8px rgba(35, 35, 35, 0.25);
+  box-shadow: 0 5px 0 rgba(35, 35, 35, 1);
   border-radius: 5px;
   padding: 0 90px 0 20px;
 }
@@ -198,10 +204,10 @@ p#password-count {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  width: 50%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .slider {
@@ -252,23 +258,12 @@ button.generate-password:active {
   box-shadow: 0 5px #020826;
   transform: translateY(4px);
 }
-
-/* Extra small devices (phones, 414px and down) */
-@media only screen and (max-width: 414px) {
-  button.generate-password {
-    font-size: 2rem;
-    width: 100%;
-  }
-  .checkbox-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .checkbox {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+.container-password-graphic {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  display: none;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -300,10 +295,45 @@ button.generate-password:active {
     flex-direction: column;
     height: 85px;
   }
+  .slidecontainer {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+/* Extra small devices (phones, 414px and down) */
+@media only screen and (max-width: 414px) {
+  button.generate-password {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .checkbox-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .checkbox {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 4.5rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  .generate-password-form {
+    margin: 50px auto 10px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
