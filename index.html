@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="robot" content="index, follow" />
+    <meta name="description" content="Generate Password" />
+    <title>Strong Password Generator Tool</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:300,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="resources/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <section class="generate-password">
+        <h1>Generate Password</h1>
+        <p>Secure your password using our password generator tool.</p>
+        <div class="generate-password-form">
+          <div class="password-field">
+            <input type="text" name="password" id="password" />
+            <div class="password-filters">
+              <button type="button" class="copy-password">
+                <i data-feather="copy" color="#232323"></i>
+              </button>
+              <button type="button" class="reveal-password">
+                <i data-feather="eye" stroke="#232323" class="eye-open"></i>
+                <i
+                  data-feather="eye-off"
+                  stroke="#232323"
+                  class="eye-close visibilty-hidden"
+                ></i>
+              </button>
+            </div>
+          </div>
+          <div class="password-settings">
+            <div class="checkbox-container">
+              <label class="checkbox" for="uppercase">
+                <input
+                  type="checkbox"
+                  name="password-options"
+                  id="uppercase"
+                  value="uppercase"
+                />
+                <span>ABC</span>
+              </label>
+
+              <label class="checkbox" for="lowercase">
+                <input
+                  type="checkbox"
+                  name="password-options"
+                  id="lowercase"
+                  value="lowercase"
+                />
+                <span>abc</span>
+              </label>
+
+              <label class="checkbox" for="digits">
+                <input
+                  type="checkbox"
+                  name="password-options"
+                  id="digits"
+                  value="uppercase"
+                />
+                <span>123</span>
+              </label>
+
+              <label class="checkbox" or="symbols">
+                <input
+                  type="checkbox"
+                  name="password-options"
+                  id="symbols"
+                  value="lowercase"
+                />
+                <span>$@&</span>
+              </label>
+            </div>
+
+            <div class="length-container">
+              <p class="password-character-count">
+                password length (minimum of 8):
+              </p>
+              <div class="slidecontainer">
+                <input
+                  type="range"
+                  min="8"
+                  max="50"
+                  value="16"
+                  class="slider"
+                  id="password-length"
+                />
+                <p id="password-count">16</p>
+              </div>
+            </div>
+          </div>
+          <div class="generate-button-container">
+            <button type="button" class="generate-password">
+              Generate Password
+            </button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="resources/js/main.js"></script>
+  </body>
+</html>
